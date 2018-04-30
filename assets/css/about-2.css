@@ -263,3 +263,11 @@
               
               }
           }
+
+           @media (max-width:600px)
+          {
+              .coll
+              {
+                top: 10px;
+              }
+          }
