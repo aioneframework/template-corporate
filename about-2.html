@@ -9,7 +9,27 @@
       <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/vendor.min.js"></script>
       <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/aione.min.js"></script>
       <script type="text/javascript" src="assets/js/about-2.js"></script>
-     
+      <style type="text/css">
+      	.aione-tabs.horizontal.theme-pointer>.nav>.active{
+      		color: #fff;
+            background: #03a9f4;
+      	}
+      	.aione-tabs.horizontal.theme-pointer>.nav>.active:hover{
+      		color: #fff;
+            background: #03a9f4;
+      	}
+      	.aione-tabs.horizontal.theme-pointer>.nav>.active:after {
+    		display: block;
+    		bottom: -16px;
+    		border-top-color: #03a9f4;
+		}
+		.aione-tabs.horizontal.theme-pointer>.nav>.active:after:hover{
+   		 display: block;
+    	bottom: -16px;
+    	border-top-color: #03a9f4;
+		}
+
+      </style>
    </head>
    <body>
       <div id="aione_wrapper" class="aione-wrapper page-home layout-header-top aione-layout-wide aione-theme-arcane">
@@ -47,11 +67,10 @@
                                           </div>
                                        </div>
                                     </div>
-                                    
                                  </div>
                                  <div class="position-absolute" style="bottom: 0px;top: 330px; width: 100%;">
-                                       <img class="width-100 wave-img" src="assets/images/img-wave-rotate.png">
-                                    </div>
+                                    <img class="width-100 wave-img" src="assets/images/img-wave-rotate.png">
+                                 </div>
                               </section>
                               <section>
                                  <div class="ar pv-50 ph-5p">
@@ -119,58 +138,113 @@
                               </section>
                               <section>
                                  <div class="ar pv-50 ph-5p">
-                                    <div class="center-align mb-80 ph-20p">
+                                    <div class="center-align mb-60 ph-20p">
                                        <h2 class="font-weight-400 light-blue lighten-1 mb-20">How It Works</h2>
                                        <p class="font-size-18 line-height-27 blue-grey darken-2 font-weight-300">Lorem ipsum dolor sit amet menandri lobortis laboramus nec ex, ullum regione instructior duo ei.</p>
                                     </div>
                                     <div class="ac l50 m50 s100">
-                                       <div id="project_tabs" class="project-tabs center-align">
-                                          <div class="aione-tabs">
-                                             <div id="aione_tabs_nav" class="aione-tabs-nav horizontal theme-pastel">
-                                                <ul>
-                                                   <li data-target="tab_objective" class="active">
-                                                      <div class="aione-tab-icon"><i class="ion-ios-analytics-outline"></i></div>
-                                                      Home
-                                                   </li>
-                                                   <li data-target="tab_about" class="">
-                                                      <div class="aione-tab-icon"><i class="ion-ios-keypad-outline"></i></div>
-                                                      About
-                                                   </li>
-                                                   <li data-target="tab_service" class="">
-                                                      <div class="aione-tab-icon"><i class="ion-ios-infinite-outline"></i></div>
-                                                      Service
-                                                   </li>
-                                                   
-                                                </ul>
-                                             </div>
-                                             <div id="aione_tabs_content" class="aione-tabs-content">
-                                                <div id="tab_objective" class="active">
-                                                   <div class="objective">
-                                                      <div class="aione-title">
-                                                         <h3 class="font-weight-100 teal lighten-3 m-0">Home</h3>
+                                                <div class=" aione-tabs horizontal align-center layout-left theme-pointer margin">
+                                                   <div class="nav">
+                                                      <div data-target="#tab_sign-up" class="bg-light-blue">
+                                                         <div class="ph-30 pb-5">
+                                                            <i class="ion-ios-locked-outline font-size-30 white"></i>
+                                                            <p class="font-size-15 white" style="margin-top: -10px;">Sign Up</p>
+                                                         </div>
+                                                      </div>
+                                                      <div data-target="#tab_Log-in" class="bg-light-blue">
+                                                         <div class="ph-30 pb-5">
+                                                            <i class="ion-log-in font-size-30 white"></i>
+                                                            <p class="font-size-15 white" style="margin-top: -10px;">Log In</p>
+                                                         </div>
+                                                      </div>
+                                                      <div data-target="#tab_add-contact" class="bg-light-blue">
+                                                         <div class="ph-10 pb-5">
+                                                            <i class="ion-ios-personadd-outline font-size-30 white"></i>
+                                                            <p class="font-size-15 white" style="margin-top: -10px;">Add Contact</p>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="content">
+                                                      <div id="#tab_sign-up" class="">
+                                                         <h4 class="pv-10 pl-70 font-weight-400 blue-grey darken-4">Sign Up</h4>
+                                                         <p class="font-size-17 line-height-27 pl-70 font-weight-300 blue-grey">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                                         <div class="pl-70 mt-20">
+                                                         	<ul class="">
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">Ut enim ad minim veniam quis</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">adipiscing elit sed do eiusmod</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">minim veniam quis nostrud</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">adminim veniam quis</span>
+                                                         	</li>
+                                                         </ul>
+                                                         </div>
+                                                      </div>
+                                                      <div id="#tab_Log-in" class="">
+                                                         <h4 class="pv-10 pl-70 font-weight-400 blue-grey darken-4">Log In</h4>
+                                                         <p class="font-size-17 line-height-27 pl-70 font-weight-300 blue-grey">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                                         <div class="pl-70 mt-20">
+                                                         	<ul class="">
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">Ut enim ad minim veniam quis</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">adipiscing elit sed do eiusmod</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">minim veniam quis nostrud</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">adminim veniam quis</span>
+                                                         	</li>
+                                                         </ul>
+                                                         </div>
+                                                      </div>
+                                                      <div id="#tab_add-contact" class="">
+                                                         <h4 class="pv-10 pl-70 font-weight-400 blue-grey darken-4">Add Contact</h4>
+                                                         <p class="font-size-17 line-height-27 pl-70 font-weight-300 blue-grey">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                                         <div class="pl-70 mt-20">
+                                                         	<ul class="">
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">Ut enim ad minim veniam quis</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">adipiscing elit sed do eiusmod</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">minim veniam quis nostrud</span>
+                                                         	</li>
+                                                         	<li class="pv-5">
+                                                         		<i class="mt-10 display-inline-block ion-checkmark font-size-20 light-blue pr-10"></i>
+                                                         		<span class="font-size-17 font-weight-300 blue-grey line-height-27">adminim veniam quis</span>
+                                                         	</li>
+                                                         </ul>
+                                                         </div>
                                                       </div>
                                                    </div>
                                                 </div>
-                                                <div id="tab_about" class="">
-                                                   <div class="about">
-                                                      <div class="pargraph aione-align-center">
-                                                         <h4 class="teal lighten-3 mb-10">About</h4>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                                <div id="tab_service" class="">
-                                                   <div class="service">
-                                                      <div class="pargraph aione-align-center">
-                                                         <h4 class="teal lighten-3 mb-0">Service</h4>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
+                                          
                                     </div>
                                     <div class="ac l50 m50 s100">
-                                       
+                                    	<div class="center-align">
+                                    		<img src="assets/images/img-a.png">
+                                    	</div>
                                     </div>
                                  </div>
                               </section>
@@ -220,7 +294,6 @@
                                              </div>
                                           </div>
                                        </div>
-
                                     </div>
                                     <div class="ac l33 m33 s100">
                                        <div class="center-align">
@@ -270,7 +343,6 @@
                                     </div>
                                  </div>
                               </section>
-                              
                               <!-- Screenshot -->
                               <section>
                                  <div class="ar pv-50 ph-5p bg-grey bg-lighten-4">
@@ -354,7 +426,7 @@
                                     </div>
                                  </div>
                                  <div class="position-absolute" style="top: 0px;width: 100%;">
-                                 	<img src="assets/images/img-wave-alt.png">
+                                    <img src="assets/images/img-wave-alt.png">
                                  </div>
                               </section>
                            </div>

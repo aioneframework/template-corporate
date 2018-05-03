@@ -4,32 +4,67 @@
         }
         
         .icon-hover i:hover{
-            color: #fab702;
+            color: #168dc5;
             transition: all 0.4s;
         }
         ul li span:hover{
-          color: #fab702;
+          color: #168dc5;
           transition: all 0.4s;
+        }
+        .site-title .title,.site-title .tagline{
+          font-weight: 700;letter-spacing: 1.1px;
         }
         .aione-footer{
           margin: 0px;
+        }
+        .aione-nav.horizontal>ul>li>ul>li{
+          border-bottom: 1px solid #f2f2f2;
+          padding: 4px 0px;
+        }
+        .sub-menu li{
+          color: #168dc5;
+          background-color: #ffffff;
+        }
+        .aione-nav.horizontal>ul>li>ul{
+          background: #ffffff;
+          box-shadow:2px 3px 8px 1px rgba(116, 110, 110, 0.15)
+          
+        }
+        .aione-nav.horizontal>ul>li>ul{
+          width: 400px;border: none;
+        }
+        .aione-nav.horizontal>ul>li>ul>li>a:hover{
+          background-color: #ffffff;
+          color: #168dc5;
+        }
+        .aione-nav.horizontal>ul>li>ul>li>a{
+          font-size:14px;
+        }
+        .border-icon-1{
+          padding: 5px 3px 2px 7px;
+           border: 1px solid #e8e8e8;
+           color:#ffca28;
+        }
+        .border-icon{
+          border: 1px solid #e8e8e8;
+          padding: 5px 6px 2px 7px;color:#ffca28;
         }
     </style>
 <div class="ar p-20">
   <div class="ac l20 m50 s100 aione-align-center">
       <div class="site-title">
-          <div class="title font-size-25 font-weight-700 grey darken-4">THEME</div>
-          <div class="tagline font-size-20 font-weight-700 " style="color: #fab702;">CORPORATE</div>
+          <div class="title font-size-25 grey darken-4">THEME</div>
+          <div class="tagline font-size-20" style="color: #168dc5;">CORPORATE</div>
       </div>
   </div>
   <div class="ac l50 m50 s100">
-      <div class="pt-9">
+      <div class="">
           <nav id="aione_nav" class="aione-nav horizontal ">
               <ul id="aione_menu" class="aione-menu">
                   <li class="aione-nav-item level0">
                       <a href="index.html"><span class="pr-25 nav-item-text" data-hover="Home">Home</span></a>
-                      <ul id="aione_menu" class="aione-menu">
-                        <li class="aione-nav-item level0"><a href="home-1.html"><span class="nav-item-text">Home-01</span></a></li>
+                      <ul id="aione_menu" class="aione-menu sub-menu">
+                        <li class="aione-nav-item level0"><a href="home-1.html"><span class="nav-item-text grey darken-4">Home-01</span></a></li>
                       </ul>
                   </li>
                   <li class="aione-nav-item level0">
@@ -88,9 +123,8 @@
   </div>
   <div class="ac l30 m50 s100">
       <div class="pt-15 aione-align-right pr-20 icon-hover">
-          <span><i class="ion-ios-search-strong font-size-20 pr-3 grey darken-3"> </i></span>
-          <span class="grey lighten-2 font-size-20">|</span>
-          <span><i class="ion-bag font-size-20 grey darken-3"></i></span>
+          <span class="border-icon-1 mr-3"><i class="ion-ios-search-strong font-size-20"> </i></span>
+          <span class="border-icon"><i class="ion-bag font-size-20"></i></span></div>
       </div>
   </div>
 </div>
