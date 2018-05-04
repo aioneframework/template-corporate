@@ -2,63 +2,64 @@
   <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="http://aioneframework.com/aioneframework/assets/css/aione.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700,800,900">
       <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <script type="text/javascript" src="http://aioneframework.com/aioneframework/assets/js/vendor.js"></script>
       <script type="text/javascript" src="http://aioneframework.com/aioneframework/assets/js/aione.js"></script>
        <style type="text/css">
-            .bg-image{
-              background-image: url('assets/images/march.jpg');
-              background-size: cover;
-              overflow: hidden;
-              height: 100%;
-              
+           .bg-image-5{
+            background-image: url('assets/images/march.jpg');
+            background-size: cover;
+            overflow: hidden;
+            height: 100%;
+            
+          }
+         .seprator span:before{
+            content: '';
+            display: block;
+            width: 30px;
+            position: absolute;
+            top: 10px;
+            left: 100px;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+         } 
+         .seprator span:after{
+            content: '';
+            display: block;
+            width: 30px;
+            position: absolute;
+            top: 10px;
+            right: 100px;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+         } 
+         .box-shadow-main{
+          box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+          height: 100vh;
+          overflow-y: scroll;
+         }
+         .box-shadow-btn{
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
             }
-           .seprator span:before{
-              content: '';
-              display: block;
-              width: 30px;
-              position: absolute;
-              top: 10px;
-              left: 100px;
-              border-top: 1px solid rgba(0, 0, 0, 0.12);
-           } 
-           .seprator span:after{
-              content: '';
-              display: block;
-              width: 30px;
-              position: absolute;
-              top: 10px;
-              right: 100px;
-              border-top: 1px solid rgba(0, 0, 0, 0.12);
-           } 
-           .box-shadow-main{
-            box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-            height: 100vh;
-            overflow-y: scroll;
-           }
-           .box-shadow-btn{
-              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-              }
-            .outline-none{
-              outline: none;
-            } 
-            @media  (min-width: 300px) and (max-width: 959px) {
-              .bg-image .hide-sec{
-                display: none;
-              }
-              .center-text{
-                text-align: center;
-              }
-              
-            } 
-           @media only screen and (min-width: 993px){
-            .logo-show{
+          .outline-none{
+            outline: none;
+          } 
+          @media  (min-width: 300px) and (max-width: 959px) {
+            .bg-image .hide-sec{
               display: none;
             }
-           }
-
-        </style>
+            .center-text{
+              text-align: center;
+            }
+            
+          } 
+         @media only screen and (min-width: 993px){
+          .logo-show{
+            display: none;
+          }
+         }
+ 
+       </style>
   </head>
   <body>
     <div id="aione_wrapper" class="aione-wrapper aione-layout- aione-theme-arcane">
@@ -72,7 +73,7 @@
           <div class="wrapper">
             <div id="aione_page_content" class="aione_page_content m-0">
               <div class="wrapper">
-                 <section class="bg-image">
+                 <section class="bg-image-5">
                   <div class="ar">
                     <div class="ac l70 m100 s100 p-12p hide-sec"> 
                       <div class="mb-32">
