@@ -19,21 +19,36 @@
       	box-shadow: 0 1px 25px rgba(0, 0, 0, 0.1);
       	}
       	::placeholder {
-        color: white;
-        padding-left:15px;
-        }
-        .hover-border:hover{
-        	border:1px solid white;
-        }
-       .bg-light-blue-grdt{
-       	background: -webkit-linear-gradient(right, rgb(194, 233, 252), rgb(29, 145, 200));
-       }
+           color: white;
+           padding-left:15px;
+           }
+           .hover-border:hover{
+           	border:1px solid white;
+           }
+          .bg-light-blue-grdt{
+          	background: -webkit-linear-gradient(right, rgb(194, 233, 252), rgb(29, 145, 200));
+          }
+          .aione-scroll-to-top{
+		    display: block;
+		    position: fixed;
+		    right: 10px;
+		    bottom: 0;
+		    z-index: 999;
+		    background: #168dc5;
+		    color: #ffffff;
+		    line-height: 30px;
+		    font-size: 30px;
+		    width: 40px;
+		    text-align: center;
+		    border-radius: 6px 6px 0 0;
+		  }
       </style>
    </head>
    <body>
       <div id="aione_wrapper" class="aione-wrapper page-home layout-header-top aione-layout-wide aione-theme-arcane">
          <div class="wrapper">
-            <div id="aione_header" class="aione-header light load-template">
+            <div id="aione_header" class="aione-header light ">
+              
             </div>
             <!--aione-header-->
             <div id="aione_main" class="aione-main fullwidth p-0">
@@ -42,7 +57,36 @@
                      <div class="wrapper">
                         <div id="aione_page_content" class="aione-page-content m-0">
                            <div class="wrapper">
-                              <section>
+                               <nav id="aione_nav" class="aione-nav horizontal ">
+                                  <ul id="aione_menu" class="aione-menu">
+                                     
+                                      <li class="aione-nav-item level0">
+                                          <a href="#one"><span class="pr-25 nav-item-text" data-hover="Services">Services</span></a>
+                                         
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#two"><span class="pr-25 nav-item-text" data-hover="Home">Blog</span></a>
+                                          
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#three"><span class="pr-25 nav-item-text" data-hover="Home">Portfolio</span></a>
+                                          
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#four"><span class="pr-25 nav-item-text" data-hover="Pricing">Pricing</span></a>
+                                         
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#five"><span class="pr-25 nav-item-text" data-hover="Home">Contact</span></a>
+                                          
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#latestblog"><span class="pr-25 nav-item-text" data-hover="Home">Latest Blog</span></a>
+                                          
+                                      </li>
+                                  </ul>
+                              </nav>
+                              <section id="one">
                                  <div class="ar pv-50 ph-5p" style="background: -webkit-linear-gradient(right, rgb(194, 233, 252), rgb(29, 145, 200));">
                                     <div class="ac l60 m60 s100">
                                        <div class="mt-24p mb-5p">
@@ -68,7 +112,7 @@
                                     </div>
                                  </div>
                               </section>
-                              <section>
+                              <section id="two">
                                  <div class="ar p-7p">
                                     <div class="ac l33 m33 s100">
                                        <div class="center-align">
@@ -105,7 +149,7 @@
                                     </div>
                                  </div>
                               </section>
-                              <section>
+                              <section id="three">
                                  <div class="ar pv-50 ph-5p bg-blue-grey bg-lighten-5">
                                     <div class="ac l40 m40 s100">
                                        <div class="">
@@ -154,7 +198,7 @@
                                  </div>
                               </section>
                               <!-- Amazing Features -->
-                              <section>
+                              <section id="four">
                                  <div class="ar pv-50 ph-5p">
                                     <div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 blue-grey darken-4 mb-20">Amazing Features</h3>
@@ -225,7 +269,7 @@
                                  </div>
                               </section>
                               <!-- Apps Screenshot -->
-                              <section>
+                              <section id="five">
                                  <div class="ar pv-50 ph-5p bg-blue-grdt">
                                     <div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 white mb-20">Apps Screenshot</h3>
@@ -522,7 +566,7 @@
                               	 </div>
                               </section>
                               <!-- Latest Blog -->
-                              <section>
+                              <section id="latestblog">
                               	<div class="ar pv-50 ph-5p bg-grey bg-lighten-4"> 
                               		<div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 blue-grey darken-4 mb-20">Latest Blog</h3>
@@ -569,7 +613,13 @@
                               			</div>
                               		</div>
                               	</div>
+                              	<div class="ar">
+                              		  <div class="aione-scroll-to-top">
+	                            	    <a href="#one"><i class="fa fa-angle-up font-size-40 white"></i></a>
+                              		  </div>	
+	                                </div>
                               </section>
+                             
                            </div>
                         </div>
                         <!--aione-page-content-->
@@ -581,7 +631,7 @@
                <!--wrapper-->
             </div>
             <!--aione-main-->
-            <div id="aione_footer" class="aione-footer dark load-template">
+            <div id="aione_footer" class="aione-footer dark load-template m-0">
             </div>
             <!-- .aione-footer -->
             <div id="aione_copyright" class="aione-copyright dark load-template">
