@@ -21,12 +21,15 @@
             background-color: orange;
             opacity: 0.6;
           }
+          .aione-logo{
+            display: none;
+          }
 
       </style>
       <script type="text/javascript">
         $(document).ready(function(){
           $('.click-icon').click(function(){
-            $('.aione-logo').toggle();
+            $('.aione-logo').slideDown(300);
           });
         });
 
@@ -64,10 +67,10 @@
                                   </div>
                               </section>
                               <section>
-                                <div class="ar aione-logo position-absolute" style="background-color: orange;top: 0;right: 10%;left: 0;bottom: 0;opacity: 0.9;z-index:20;">
+                                <div class="ar aione-logo position-absolute" style="background-color: orange;top: 0;right: 0;left: 0;bottom: 0;opacity: 0.9;z-index:20;">
                                 <div class="ac l100 m50 s100 pt-10">
-                                  <nav id="aione_nav" class="aione-nav aione-align-right pt-50 vertical" style="border-bottom: none;">
-                                    <ul id="aione_menu" class="aione-menu">
+                                  <nav id="aione_nav" class="aione-nav aione-align-right pr-50 pt-50 vertical" style="border-bottom: none;">
+                                    <ul id="aione_menu" class="aione-menu ">
                                        <li class="aione-nav-item level0 white">
                                             <a href="#one" ><span class=" pr-25 nav-item-text" data-hover="Home">Home</span></a>
                                         </li>
