@@ -31,7 +31,7 @@
               text-align: center;
               border-radius: 6px 6px 0 0;
             }
-             h1,h2,h3,h4,p{
+             h1,h2,h3,h4{
               font-family: 'Arima Madurai', cursive;
              }
              .aione-nav{
@@ -67,8 +67,8 @@
           $('.bounce').click(function(){
             $('#two').slidedown(200);
           });
-           $('body').scroll('mousewheel', function(e){
-              if(e.originalEvent.wheelDelta /120 > 0) {
+           $(window).scroll(function(e){
+              if ($(this).scrollTop() >= 100)   {
                   $('.aione-scroll-to-top').fadeIn();
               }
               else{
@@ -147,7 +147,6 @@
                                   </div>
                                </div>
                               </section>
-                               <div class="clear"></div>
                               <section id="two">
                                 <div class="ar p-5p">
                                   <div class="about aione-align-center pb-50">
@@ -194,7 +193,8 @@
                               </section>
                               <section id="four">
                                 <div class="ar pb-5p">
-                                  <div class="ac l30 m50 s100 p-0" style="background-image: url('assets/images/whychooseusimg.jpg');background-attachment: fixed;height: 800px;"> </div>
+                                  <div class="ac l30 m50 s100 p-0" style="background-image: url('assets/images/whychooseusimg.jpg');background-attachment: fixed;height: 800px;"> 
+                                  </div>
                                   <div class="ac l70 m50 s100 ph-10p pv-12p">
                                     <div class="about">
                                       <h2 class="font-weight-500 grey darken-4">Why<span class="orange"> Choose</span>  Us</h2>
@@ -225,8 +225,7 @@
                                         <button class="bg-orange mt-20 ">View Detail</button>
                                       </div>
                                   </div>
-                                 </div>
-                                </div>
+                                  </div>
                               </section>
                               <!-- Amazing Features -->
                               <section id="five" style="background-color: #f5f5f5;">
