@@ -10,7 +10,7 @@
       <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/aione.min.js"></script>
       <style type="text/css">
          .bg-blue-grdt{
-         background: linear-gradient(to right, rgb(20, 136, 204), rgb(43, 50, 178));
+         background: -webkit-linear-gradient(right, rgba(79,52,206,1), rgba(124,76,191,1));
          }
          .owl-nav{
          display: none;
@@ -25,16 +25,13 @@
            .hover-border:hover{
            	border:1px solid white;
            }
-          .bg-light-blue-grdt{
-          	background: -webkit-linear-gradient(right, rgb(194, 233, 252), rgb(29, 145, 200));
-          }
           .aione-scroll-to-top{
 		    display: block;
 		    position: fixed;
 		    right: 10px;
 		    bottom: 0;
 		    z-index: 999;
-		    background: #168dc5;
+		    background: -webkit-linear-gradient(right, rgba(79,52,206,1), rgba(124,76,191,1));
 		    color: #ffffff;
 		    line-height: 30px;
 		    font-size: 30px;
@@ -42,7 +39,88 @@
 		    text-align: center;
 		    border-radius: 6px 6px 0 0;
 		  }
+		  .btn-hover:hover{
+		  	box-shadow: 0px 5px 15px #0055dc;
+
+		  }
       </style>
+      <!-- nav responsive -->
+      <style type="text/css">
+      	ul{
+      		margin: 0 auto;
+      		padding:0px;
+      		width: 80%;
+      		text-align: right;
+      	}
+      	ul li{
+      		display: inline-block;
+      		padding: 10px;
+      		list-style: none;
+      	}
+      	ul li a{
+      		color: #37474F;
+      		text-decoration: none;
+      	}
+      	.toggle{
+				text-align: right;
+				width: 100%;
+				padding:10px 20px;
+				box-sizing: border-box;
+				background: -webkit-linear-gradient(right, rgba(79,52,206,1), rgba(124,76,191,1));
+				display: none;
+      	}
+      	.stuck-nav{
+      		background: -webkit-linear-gradient(right, rgba(79,52,206,1), rgba(124,76,191,1));
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 99;
+      	}
+      	.hover-read-btn:hover{
+				background: -webkit-linear-gradient(right, rgba(79,52,206,1), rgba(124,76,191,1));
+				border:1px solid #512da8;
+				color:white;
+      	}
+      	@media (max-width: 768px) {
+      		.toggle{
+      			display: block;
+      			cursor: pointer;
+      		}
+      		ul{
+      			display: none;
+      			width: 100%;
+      		}
+      		.active{
+      			display: block;
+      		}
+      		ul li {
+      			display: block;
+      			text-align: center;
+      		}
+      		ul li:hover{
+			      background-color: #5A48C0;
+               color: white;
+	         }
+	         ul li:hover a{
+	               color: white;
+	         }
+      		.logo{
+      			margin-top: 10px;
+      		}
+      	}
+      </style>
+      <script type="text/javascript">
+      	$(document).ready(function(){
+      		$('.menu').click(function(){
+      			$('ul').toggleClass('active');
+      		});
+
+      		$('ul li a').click(function(){
+      			$('ul').removeClass('active');
+      		})
+      	});
+      </script>
+      
    </head>
    <body>
       <div id="aione_wrapper" class="aione-wrapper page-home layout-header-top aione-layout-wide aione-theme-arcane">
@@ -57,37 +135,49 @@
                      <div class="wrapper">
                         <div id="aione_page_content" class="aione-page-content m-0">
                            <div class="wrapper">
-                               <nav id="aione_nav" class="aione-nav horizontal ">
+                              <div class="ar pv-15 stuck-nav">
+                              	 <nav id="aione_nav" class="">
+                                  <div class="aione-float-left pl-20">
+                                  	<h4 class="font-weight-400 logo m-0 white">Aione Framework</h4>
+                                  </div>
+                                  <div class="toggle">
+                                  	<i class="fa fa-bars menu font-size-30 white"></i>
+                                  </div>
                                   <ul id="aione_menu" class="aione-menu">
                                      
                                       <li class="aione-nav-item level0">
-                                          <a href="#one"><span class="pr-25 nav-item-text" data-hover="Services">Services</span></a>
+                                          <a href="#one"><span class="pr-25 nav-item-text white" data-hover="Welcome">Welcome</span></a>
                                          
                                       </li>
                                       <li class="aione-nav-item level0">
-                                          <a href="#two"><span class="pr-25 nav-item-text" data-hover="Home">Blog</span></a>
+                                          <a href="#Service"><span class="pr-25 nav-item-text white" data-hover="Overview">Overview</span></a>
                                           
                                       </li>
                                       <li class="aione-nav-item level0">
-                                          <a href="#three"><span class="pr-25 nav-item-text" data-hover="Home">Portfolio</span></a>
+                                          <a href="#feature"><span class="pr-25 nav-item-text white" data-hover="Feature">Feature</span></a>
                                           
                                       </li>
                                       <li class="aione-nav-item level0">
-                                          <a href="#four"><span class="pr-25 nav-item-text" data-hover="Pricing">Pricing</span></a>
+                                          <a href="#Apps"><span class="pr-25 nav-item-text white" data-hover="Apps">Apps</span></a>
+                                          
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#Testimonial"><span class="pr-25 nav-item-text white" data-hover="Testimonial">Testimonial</span></a>
+                                          
+                                      </li>
+                                      <li class="aione-nav-item level0">
+                                          <a href="#Pricing"><span class="pr-25 nav-item-text white" data-hover="Pricing">Pricing</span></a>
                                          
                                       </li>
                                       <li class="aione-nav-item level0">
-                                          <a href="#five"><span class="pr-25 nav-item-text" data-hover="Home">Contact</span></a>
-                                          
-                                      </li>
-                                      <li class="aione-nav-item level0">
-                                          <a href="#latestblog"><span class="pr-25 nav-item-text" data-hover="Home">Latest Blog</span></a>
+                                          <a href="#latestblog"><span class="pr-25 nav-item-text white" data-hover="Home">Latest Blog</span></a>
                                           
                                       </li>
                                   </ul>
                               </nav>
-                              <section id="one">
-                                 <div class="ar pv-50 ph-5p" style="background: -webkit-linear-gradient(right, rgb(194, 233, 252), rgb(29, 145, 200));">
+                              </div>
+                              <section id="one" class="pt-60">
+                                 <div class="ar pv-50 ph-5p" style="background: -webkit-linear-gradient(right, rgba(79,52,206,1), rgba(124,76,191,1));">
                                     <div class="ac l60 m60 s100">
                                        <div class="mt-24p mb-5p">
                                           <h1 class="font-size-60 font-weight-300 line-height-80 white mb-20">Revoulationary App that perfect for you</h1>
@@ -104,56 +194,56 @@
                                     </div>
                                     <div class="ac l40 m40 s100">
                                        <div  class="center-align">
-                                       	<img src="assets/images/feature-mockup.png">
+                                       	<!-- <img src="assets/images/feature-mockup.png"> -->
                                           <!-- <img src="assets/images/iphone-1936818_640.png"> -->
-                                          <!-- <img src="assets/images/mockup-iphone-2.png"> -->
+                                          <img src="assets/images/mockup-iphone-2.png">
                                           
                                        </div>
                                     </div>
                                  </div>
                               </section>
-                              <section id="two">
+                              <section id="">
                                  <div class="ar p-7p">
                                     <div class="ac l33 m33 s100">
                                        <div class="center-align">
                                           <div class="mb-20">
-                                             <i class="ion-ios-lightbulb-outline font-size-50 white ph-20 circle bg-light-blue-grdt"></i>
+                                             <i class="ion-ios-lightbulb-outline font-size-50 white ph-20 circle blue-grey darken-4"></i>
                                           </div>
                                           <div>
                                              <h4 class="font-weight-400 blue-grey darken-4">Great Idea</h4>
-                                             <p class="font-weight-300 font-size-15 line-height-25 blue-grey">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium. eu debet utinam vim. Idque accusam ea sit, has justo adversarium</p>
+                                             <p class="font-weight-300 font-size-15 line-height-25 blue-grey darken-3">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium. eu debet utinam vim. Idque accusam ea sit, has justo adversarium</p>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="ac l33 m33 s100">
                                        <div class="center-align">
                                           <div class="mb-20">
-                                             <i class="ion-ios-copy-outline font-size-50 white ph-20 circle bg-light-blue-grdt"></i>
+                                             <i class="ion-ios-copy-outline font-size-50 white ph-20 circle blue-grey darken-4"></i>
                                           </div>
                                           <div>
                                              <h4 class="font-weight-400 blue-grey darken-4">Responsive Design</h4>
-                                             <p class="font-weight-300 font-size-15 line-height-25 blue-grey">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium. eu debet utinam vim. Idque accusam ea sit, has justo adversarium</p>
+                                             <p class="font-weight-300 font-size-15 line-height-25 blue-grey darken-3">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium. eu debet utinam vim. Idque accusam ea sit, has justo adversarium</p>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="ac l33 m33 s100">
                                        <div class="center-align">
                                           <div class="mb-20">
-                                             <i class="ion-ios-color-filter-outline font-size-50 white ph-18 circle bg-light-blue-grdt"></i>
+                                             <i class="ion-ios-color-filter-outline font-size-50 white ph-18 circle blue-grey darken-4"></i>
                                           </div>
                                           <div>
                                              <h4 class="font-weight-400 blue-grey darken-4">Creative Design</h4>
-                                             <p class="font-weight-300 font-size-15 line-height-25 blue-grey">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium. eu debet utinam vim. Idque accusam ea sit, has justo adversarium</p>
+                                             <p class="font-weight-300 font-size-15 line-height-25 blue-grey darken-3">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium. eu debet utinam vim. Idque accusam ea sit, has justo adversarium</p>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
                               </section>
-                              <section id="three">
-                                 <div class="ar pv-50 ph-5p bg-blue-grey bg-lighten-5">
+                              <section id="Service">
+                                 <div class="ar pv-100 ph-5p bg-blue-grey bg-lighten-5">
                                     <div class="ac l40 m40 s100">
                                        <div class="">
-                                          <img src="assets/images/abt-mockup-1.png">
+                                          <img src="assets/images/abt-mockup-p.png">
                                        </div>
                                     </div>
                                     <div class="ac l60 m60 s100">
@@ -192,29 +282,29 @@
                                           <div class="ac l10 m100 s100"></div>
                                        </div>
                                        <div class="mt-50">
-                                          <button class="white aione-rounded slider-button">Get The App</button>
+                                          <button class="white aione-rounded bg-deep-purple bg-darken-2 btn-hover">Get The App</button>
                                        </div>
                                     </div>
                                  </div>
                               </section>
                               <!-- Amazing Features -->
-                              <section id="four">
-                                 <div class="ar pv-50 ph-5p">
+                              <section id="feature">
+                                 <div class="ar pv-100">
                                     <div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 blue-grey darken-4 mb-20">Amazing Features</h3>
-                                       <p class="font-size-16 line-height-26 blue-grey darken-1 font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
+                                       <p class="font-size-16 line-height-26 blue-grey darken-3 font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
                                     </div>
                                     <div class="ac l33 m100 s100">
                                        <div class="ar aione-align-right mt-50">
                                           <div class="ac l80 m80 s100 mt-10">
                                              <div class="">
                                                 <h4 class="font-weight-400 blue-grey darken-4">Creative</h4>
-                                                <p class="font-size-17 line-height-27 blue-grey font-weight-300">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
+                                                <p class="font-size-17 line-height-27 blue-grey darken-3 font-weight-300">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
                                              </div>
                                           </div>
                                           <div class="ac l20 m20 s100 mt-10">
                                              <div class="mt-20"> 
-                                                <i class="ion-leaf font-size-30 bg-light-blue white ph-10 circle"></i>
+                                                <i class="ion-leaf font-size-30 blue-grey darken-4 aione-border ph-10 circle"></i>
                                              </div>
                                           </div>
                                        </div>
@@ -222,46 +312,46 @@
                                           <div class="ac l80 m80 s100 mt-10">
                                              <div class="">
                                                 <h4 class="font-weight-400 blue-grey darken-4">Modern</h4>
-                                                <p class="font-size-17 line-height-27 blue-grey font-weight-300">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
+                                                <p class="font-size-17 line-height-27 blue-grey darken-3 font-weight-300">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
                                              </div>
                                           </div>
                                           <div class="ac l20 m20 s100 mt-10">
                                              <div class="mt-20"> 
-                                                <i class="ion-ios-box font-size-30 bg-purple white ph-10 circle"></i>
+                                                <i class="ion-ios-box font-size-30 blue-grey darken-4 aione-border ph-10 circle"></i>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="ac l33 m100 s100">
                                        <div class="center-align">
-                                       	<img src="assets/images/feature-mockup.png">
-                                          <!-- <img src="assets/images/mockup-iphone-2.png"> -->
+                                       	<!-- <img src="assets/images/feature-mockup.png"> -->
+                                          <img src="assets/images/mockup-iphone-2.png">
                                        </div>
                                     </div>
                                     <div class="ac l33 m100 s100">
                                        <div class="ar mt-50">
                                           <div class="ac l20 m20 s100 mt-10">
                                              <div class="mt-20">
-                                                <i class="ion-arrow-expand font-size-30 white bg-red bg-lighten-2 ph-10 circle"></i>
+                                                <i class="ion-arrow-expand font-size-30 blue-grey darken-4 aione-border ph-10 circle"></i>
                                              </div>
                                           </div>
                                           <div class="ac l80 m80 s100 mt-10">
                                              <div>
                                                 <h4 class="font-weight-400 blue-grey darken-4">Responsive</h4>
-                                                <p class="font-size-17 line-height-27 blue-grey">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
+                                                <p class="font-size-17 line-height-27 blue-grey darken-3 font-weight-300">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
                                              </div>
                                           </div>
                                        </div>
                                        <div class="ar mt-50">
                                           <div class="ac l20 m20 s100 mt-10">
                                              <div class="mt-20">
-                                                <i class="ion-plus-circled font-size-30 white bg-red bg-lighten-2 ph-10 circle"></i>
+                                                <i class="ion-plus-circled font-size-30 blue-grey darken-4 aione-border ph-10 circle"></i>
                                              </div>
                                           </div>
                                           <div class="ac l80 m80 s100 mt-10">
                                              <div>
                                                 <h4 class="font-weight-400 blue-grey darken-4">Minimal</h4>
-                                                <p class="font-size-17 line-height-27 blue-grey">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
+                                                <p class="font-size-17 line-height-27 blue-grey darken-3 font-weight-300">Utinam laudem mea ei. Est ex cotidieque delicatissimi. Doctus praesent usu ut, feugiat inimicus voluptatibus te pri. Ad</p>
                                              </div>
                                           </div>
                                        </div>
@@ -269,8 +359,8 @@
                                  </div>
                               </section>
                               <!-- Apps Screenshot -->
-                              <section id="five">
-                                 <div class="ar pv-50 ph-5p bg-blue-grdt">
+                              <section id="Apps">
+                                 <div class="ar pv-100 ph-5p bg-blue-grdt">
                                     <div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 white mb-20">Apps Screenshot</h3>
                                        <p class="font-size-16 line-height-26 white font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
@@ -292,7 +382,10 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="ar ph-5p pv-50">
+                                
+                              </section>
+                              <section id="Testimonial">
+                              	 <div class="ar ph-5p pv-50">
                                     <div class="ac l100 m100 s100">
                                        <div class="aione-carousel owl-carousel owl-theme gallery aione-theme owl-loaded owl-drag">
                                           <div class="p-20">
@@ -306,7 +399,7 @@
                                                          <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                          <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                          <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
-                                                         <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                                         
                                                       </div>
                                                    </div>
                                                 <div class="ac l60">
@@ -317,7 +410,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <div class="mt-10 ph-20">
-                                                   <p class="font-size-15 line-height-23 blue-grey darken-2 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+                                                   <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
                                                 </div>
                                              </div>
                                           </div>
@@ -332,7 +425,7 @@
                                                             <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                             <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                             <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
-                                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                                            
                                                          </div>
                                                       </div>
                                                 <div class="ac l60">
@@ -343,7 +436,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <div class="mt-10 ph-20">
-                                                   <p class="font-size-15 line-height-23 blue-grey darken-2 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+                                                   <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
                                                 </div>
                                              </div>
                                           </div>
@@ -358,7 +451,7 @@
                                                       <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                       <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                       <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
-                                                      <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                                      
                                                    </div>
                                                 </div>
                                                 <div class="ac l60">
@@ -369,7 +462,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <div class="mt-10 ph-20">
-                                                   <p class="font-size-15 line-height-23 blue-grey darken-2 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+                                                   <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
                                                 </div>
                                              </div>
                                           </div>
@@ -384,7 +477,7 @@
                                                       <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                       <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
                                                       <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
-                                                      <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                                      
                                                    </div>
                                                 </div>
                                                 <div class="ac l60">
@@ -395,7 +488,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <div class="mt-10 ph-20">
-                                                   <p class="font-size-15 line-height-23 blue-grey darken-2 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+                                                   <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300 aione-align-justify">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
                                                 </div>
                                              </div>
                                           </div>
@@ -404,11 +497,11 @@
                                  </div>
                               </section>
                               <!-- Innovative Team -->
-                              <section class="bg-grey bg-lighten-4">
+                              <section id="Team" class="bg-grey bg-lighten-4">
                               	<div class="ar pv-50 ph-5p">
                               		<div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 blue-grey darken-4 mb-20">Innovative Team</h3>
-                                       <p class="font-size-16 line-height-26 blue-grey darken-2 font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
+                                       <p class="font-size-16 line-height-26 blue-grey darken-3 font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
                                     </div>
                               		<div class="ac l25 m50 s100">
                               			<div class="gallery">
@@ -500,7 +593,7 @@
                               	</div>
                               </section>
                               <!-- Pricing -->
-                              <section>
+                              <section id="Pricing">
                               	 <div class="ar pv-50 ph-20p">
                               	 	<div class="mb-70 center-align">
                                        <h3 class="font-weight-400 blue-grey darken-4 mb-20">Pricing</h3>
@@ -570,30 +663,36 @@
                               	<div class="ar pv-50 ph-5p bg-grey bg-lighten-4"> 
                               		<div class="mb-70 ph-20p center-align">
                                        <h3 class="font-weight-400 blue-grey darken-4 mb-20">Latest Blog</h3>
-                                       <p class="font-size-16 line-height-26 blue-grey darken-2 font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
+                                       <p class="font-size-16 line-height-26 blue-grey darken-3 font-weight-300">Lorem ipsum dolor sit amet, eu debet utinam vim. Idque accusam ea sit, has justo adversarium repudiandae id. Quo ex alia natum tritani,</p>
                                     </div>
                                     <div class="ac l33 m33 s100">
                                     	<div>
-                                    		<img class="aione-rounded" src="assets/images/marine-3052592_640.jpg">
+                                    		<!-- <img class="aione-rounded" src="assets/images/marine-3052592_640.jpg"> -->
+                                    		<img class="aione-rounded" src="assets/images/blog-img-1.jpg">
                                     		<h4 class="font-weight-400 blue-grey darken-4 mv-20">Clean app forever</h4>
-                                    		<p class="font-weight-300 font-size-17 line-height-27 blue-grey darken-2 aione-align-justify mb-10">Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne. At per diceret numquam. Ne vim aliquid accusamus.</p>
-                                    		<a href="#" class="font-size-14 font-weight-300 aione-border-bottom border-light-blue">Read More</a>
+                                    		<p class="font-weight-300 font-size-17 line-height-27 blue-grey darken-3 aione-align-justify mb-10">Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne. At per diceret numquam. Ne vim aliquid accusamus.</p>
+                                    		<!-- <a href="#" class="font-size-14 font-weight-300 aione-border-bottom border-light-blue">Read More</a> -->
+                                    		<button class="pv-5 ph-10 aione-border border-deep-purple border-darken-2 bg-white deep-purple darken-2 hover-read-btn">Read More</button>
                                     	</div>
                                     </div>
                                     <div class="ac l33 m33 s100">
                                     	<div>
-                                    		<img class="aione-rounded" src="assets/images/holiday-3220774_640.jpg">
+                                    		<!-- <img class="aione-rounded" src="assets/images/holiday-3220774_640.jpg"> -->
+                                    		<img class="aione-rounded" src="assets/images/blog-img-22.jpg">
                                     		<h4 class="font-weight-400 blue-grey darken-4 mv-20">Best design app for you</h4>
-                                    		<p class="font-weight-300 font-size-17 line-height-27 blue-grey darken-2 aione-align-justify mb-10">Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne. At per diceret numquam. Ne vim aliquid accusamus.</p>
-                                    		<a href="#" class="font-size-14 font-weight-300 aione-border-bottom border-light-blue">Read More</a>
+                                    		<p class="font-weight-300 font-size-17 line-height-27 blue-grey darken-3 aione-align-justify mb-10">Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne. At per diceret numquam. Ne vim aliquid accusamus.</p>
+                                    		<!-- <a href="#" class="font-size-14 font-weight-300 aione-border-bottom border-light-blue">Read More</a> -->
+                                    		<button class="pv-5 ph-10 aione-border border-deep-purple border-darken-2 bg-white deep-purple darken-2 hover-read-btn">Read More</button>
                                     	</div>
                                     </div>
                                     <div class="ac l33 m33 s100">
                                     	<div>
-                                    		<img class="aione-rounded" src="assets/images/women-3051614_640.jpg">
+                                    		<!-- <img class="aione-rounded" src="assets/images/women-3051614_640.jpg"> -->
+                                    		<img class="aione-rounded" src="assets/images/blog-img-33.jpg">
                                     		<h4 class="font-weight-400 blue-grey darken-4 mv-20">Better app for better world</h4>
-                                    		<p class="font-weight-300 font-size-17 line-height-27 blue-grey darken-2 aione-align-justify mb-10">Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne. At per diceret numquam. Ne vim aliquid accusamus.</p>
-                                    		<a href="#" class="font-size-14 font-weight-300 aione-border-bottom border-light-blue">Read More</a>
+                                    		<p class="font-weight-300 font-size-17 line-height-27 blue-grey darken-3 aione-align-justify mb-10">Lorem ipsum dolor sit amet, ridens eligendi an nec, his nostro dolorum splendide te. Docendi intellegebat eu pro, ius in facilis reprimique. Primis aliquando vis ne. At per diceret numquam. Ne vim aliquid accusamus.</p>
+                                    		<!-- <a href="#" class="font-size-14 font-weight-300 aione-border-bottom border-light-blue">Read More</a> -->
+                                    		<button class="pv-5 ph-10 aione-border border-deep-purple border-darken-2 bg-white deep-purple darken-2 hover-read-btn">Read More</button>
                                     	</div>
                                     </div>
                               	</div>
@@ -609,7 +708,7 @@
                               		</div>
                               		<div class="ac l30 m30 s100">
                               			<div>
-                              				<button class="bg-blue-grdt aione-border border-white hover-border white pv-13">Subscribe</button>
+                              				<button class="bg-blue-grdt bg-white aione-border border-white hover-border white pv-13">Subscribe</button>
                               			</div>
                               		</div>
                               	</div>
