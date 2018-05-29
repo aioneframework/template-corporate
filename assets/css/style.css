@@ -15,10 +15,8 @@ h4{font-size:25px;line-height:28px;letter-spacing:-0.04em;color:#242424}
 .custom-icon-2{padding:9px 22px;background:linear-gradient(160deg,#168dc5 0,#2494c8 35%,#abddf5 100%);color:#fff;border-radius:50%}
 .bg-opacity{background-color:#000000b8;position:absolute;top:0;right:0;left:0;bottom:0}
 a:hover{color:#01579b;transition:all .1s}
-.bg-image{background-image:url('assets/images/bg3.jpg');background-size:cover;padding:30px}
 .image{border-radius:50%;margin-bottom:-35px;border:10px solid #fff;background-color:antiquewhite}
 .aione-slide-third img{height:380px}
-.bg-get-in-touch{background-image:url('assets/images/model.jpg')}
 .custom-color{color:#168dc5}
 .bg-img-services{background-image:url('assets/images/our-workflow-title-area.jpg');background-position:center -70.7868px;height:450px}
 .slider-button{background:#168dc5}
