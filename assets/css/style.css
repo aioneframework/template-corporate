@@ -52,14 +52,11 @@ navbar
  }
 .aione-nav.horizontal>ul>li{
     float: none;
-   
-}
+ }
 #template_nav > nav > ul > li{
      padding: 0px;
 }
-.aione-nav.horizontal{
-  padding-top: 64px;
-}
+
 #template_nav > nav > ul > li > a >span{
   color: #333;
 }
@@ -264,7 +261,9 @@ a:hover {
     text-align: center;
     font-size: 15px
 }
-
+.owl-nav{
+  display: none;
+}
 @media(max-width:360px) {
     .wave-img {
         top: 317px;
@@ -317,7 +316,7 @@ a:hover {
     }
 }
 
-@media(min-width:389px) and (max-width:450px) {
+@media(min-width:350px) and (max-width:450px) {
     .wave-img {
         top: 284px;
         position: absolute
@@ -340,6 +339,13 @@ a:hover {
         margin-bottom: 27px;
         color: #fff;
         font-size: 25px
+    }
+     #carousl{
+    margin-top: 84px;
+    }
+    h1{
+      font-size: 30px;
+      margin: 0;
     }
 }
 
@@ -393,7 +399,16 @@ a:hover {
         color: #fff;
         font-size: 25px
     }
+      #carousl{
+    margin-top: 84px;
+    }
+    h1{
+      font-size: 30px;
+      margin: 0;
+    }
+   
 }
+
 
 @media(min-width:600px) and (max-width:700px) {
     .wave-img {
@@ -417,6 +432,13 @@ a:hover {
         color: #fff;
         font-size: 30px
     }
+    #carousl{
+      margin-top: 84px;
+    }
+       h1{
+      font-size: 35px;
+      margin: 0;
+    }
 }
 
 @media(min-width:700px) and (max-width:800px) {
@@ -428,6 +450,13 @@ a:hover {
         position: absolute;
         top: 14%;
         margin-left: -1px
+    }
+     #carousl{
+      margin-top: 84px;
+    }
+     h1{
+      font-size: 40px;
+      margin: 0;
     }
 }
 
@@ -453,7 +482,15 @@ a:hover {
         top: 21%
     }
 }
-
+@media(min-width:650px) and (max-width:990px) {
+  #carousl{
+      margin-top: 84px;
+    }
+    h1
+    {
+      font-size:40px;
+    }
+}
 @media(min-width:1130px) and (max-width:1300px) {
     .wave-img {
         top: 53px;
